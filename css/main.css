@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+
+  font-family: 'Exo 2', sans-serif;
+  /* font-family: 'Baloo Paaji', sans-serif; */
+  font-size: 16px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+section {
+  height: 12.5vh;
+  overflow: hidden;
+  border-top: 1px solid silver;
+}
+
+section.active {
+  flex:20;
+  overflow-y: scroll;
+}
+
+.sectiontitle {
+  position: fixed;
+}
