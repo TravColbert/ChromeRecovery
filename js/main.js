@@ -44,6 +44,7 @@ var displayImage = function(image,id) {
     classlist:["image_entry"],
     parent: listImage
   });
+
   var imgLink = new Laminar.Widget({
     id:"image_link_" + id,
     element:"a",
@@ -52,6 +53,7 @@ var displayImage = function(image,id) {
     classlist:["image_link"],
     parent: img
   });
+  
 }
 
 /* == Filter Functions for displaying subsets of the image list == */
