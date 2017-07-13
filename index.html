@@ -23,30 +23,35 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header></header>
+        <header class="layout-width-1-1">
+          <div id="title">Chrome Recovery Image Downloader</div>
+        </header>
 
         <!-- Home/Welcome Page -->
-        <section id="select_options" class="layout-col" data-mode="options">
-          <div class="sectiontitle layout-row layout-width-1-1">Options</div>
-        </section>
-        <section id="select_manufacturer" class="layout-col" data-mode="manufacturer">
-          <div class="sectiontitle layout-row layout-width-1-1">Manufacturer</div>
-          <div id="list_manufacturer" class="layout-col"></div>
-        </section>
-        <section id="select_model" class="layout-col" data-mode="model">
-          <div class="sectiontitle layout-row layout-width-1-1">Model</div>
-          <div id="list_model"></div>
-        </section>
-        <section id="select_image" class="layout-col active" data-mode="image">
-          <div class="sectiontitle layout-row layout-width-1-1">Image</div>
-          <div id="list_image" class="layout-col"></div>
-        </section>
-        <section id="select_progress" class="layout-col" data-mode="progress">
-          <div class="sectiontitle layout-row layout-width-1-1">Progress</div>
-        </section>
-
+        <div id="main" class="full-height layout-col">
+          <section id="select_options" class="layout-col" data-mode="options">
+            <div class="sectiontitle layout-row layout-width-1-4">Options</div>
+          </section>
+          <section id="select_manufacturer" class="layout-col" data-mode="manufacturer">
+            <div class="sectiontitle layout-row layout-width-1-4" data-mode="manufacturer">Manufacturer</div>
+            <!-- <div id="list_manufacturer" class="layout-col sectionlist"></div> -->
+          </section>
+          <!--
+          <section id="select_model" class="layout-col" data-mode="model">
+            <div class="sectiontitle layout-row layout-width-1-1">Model</div>
+            <div id="list_model"></div>
+          </section>
+          -->
+          <section id="select_image" class="layout-col" data-mode="image">
+            <div class="sectiontitle layout-row layout-width-1-4" data-mode="image">Image</div>
+            <!-- <div id="list_image" class="layout-col sectionlist"></div> -->
+          </section>
+          <section id="select_progress" class="layout-col" data-mode="progress">
+            <div class="sectiontitle layout-row layout-width-1-4">Progress</div>
+          </section>
+        </div>
         <!-- Common Footer -->
-        <footer></footer>
+        <footer>Made using the Laminar Toolkit</footer>
         <script src="../Laminar.js/laminar.js"></script>
         <script src="js/recovery.json.js"></script>
         <script src="js/main.js"></script>

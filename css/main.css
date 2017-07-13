@@ -16,10 +16,27 @@ html, body {
   user-select: none;
 }
 
+header {
+  padding: 0.25em 1em;
+}
+header div#title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 section {
   height: 12.5vh;
   overflow: hidden;
   border-top: 1px solid silver;
+  padding: 0em 1em 0.2em 1em;
+}
+
+section > * {
+  flex-shrink: 0;
+}
+
+section > .sectionlist {
+  visibility: hidden;
 }
 
 section.active {
@@ -27,6 +44,15 @@ section.active {
   overflow-y: scroll;
 }
 
+section.active > .sectionlist {
+  visibility: visible;
+}
+
 .sectiontitle {
-  position: fixed;
+  color: white;
+  background: silver;
+  font-size: 1.1em;
+  padding: 0.25em 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }
