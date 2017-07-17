@@ -41,7 +41,7 @@ var displayImage = function(image,id) {
   imgString = image.manufacturer + " " + image.model;
   var img = new Laminar.Widget({
     id:"img_" + id,
-    classlist:["image_entry"],
+    classlist:["image_entry","layout-align-baseline"],
     parent: listImage
   });
 
@@ -50,10 +50,21 @@ var displayImage = function(image,id) {
     element:"a",
     content:image.name,
     proplist:[["href",image.url]],
-    classlist:["image_link"],
-    parent: img
+    classlist:["image_link","layout-xs-width-1-1","layout-sm-width-2-3","layout-md-width-1-2"],
+    parent:img
   });
-  
+  var imgVersion = new Laminar.Widget({
+    id:"image_version_" + id,
+    classlist:["image_version","layout-xs-hidden","layout-sm-width-1-3","layout-md-width-1-4"],
+    content:"v: " + image.version,
+    parent:img
+  });
+  var imgChannel = new Laminar.Widget({
+    id:"image_channel_" + id,
+    classlist:["image_channel","layout-xs-hidden","layout-sm-hidden","layout-md-width-1-4"],
+    content:"c: " + image.channel,
+    parent:img
+  });
 }
 
 /* == Filter Functions for displaying subsets of the image list == */
@@ -137,7 +148,8 @@ ready(function() {
   images.sort(sortImages);  // Sort images retrieved from JSON
   setSectionModeActions();  // Make the sections reactive based on app state
   setSectionTitleActions(); // When you click on the section title change the app state
-  appState.__set_mode = "manufacturer";
+  setAppState("manufacturer");
+  //appState.__set_mode = "manufacturer";
   buildManufacturerList();
   displayManufacturerList();
   displayImages();
