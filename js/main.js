@@ -50,7 +50,7 @@ var displayImage = function(image,id) {
     element:"a",
     content:image.name,
     proplist:[["href",image.url]],
-    classlist:["image_link","layout-xs-width-1-1","layout-sm-width-2-3","layout-md-width-1-2"],
+    classlist:["image_link","list_entry","layout-xs-width-1-1","layout-sm-width-2-3","layout-md-width-1-2"],
     parent:img
   });
   var imgVersion = new Laminar.Widget({
@@ -97,7 +97,7 @@ var displayManufacturer = function(manufacturerName, id) {
     id: "manufacturer" + id,
     content: manufacturerName,
     parent: "#list_manufacturer",
-    classlist: ["manufacturer_entry"],
+    classlist: ["list_entry"],
     datalist: {name:manufacturerName,id:id}
   });
   name.listenEvent("click",function(e,obj) {

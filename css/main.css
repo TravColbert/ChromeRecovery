@@ -29,10 +29,12 @@ header div#title {
 section {
   height: 12.5vh;
   overflow: hidden;
-  border: 2px solid rgb(220,220,220);
-  margin: 5px 5px 0px;
+  border: 1px solid rgb(240,240,240);
+  margin: 0px 5px 8px;
   background-color: white;
   border-radius: 0.5em;
+  min-height: 2.5em;
+  /* box-shadow: 0 2px 3px rgba(0,0,0,0.3) */
 }
 
 section > * {
@@ -60,15 +62,18 @@ section.active > .sectionlist {
   position: absolute;
   color: white;
   background: rgb(220,220,220);
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
   font-weight: bold;
   padding: 0.25em 1em;
-  /* border-bottom-left-radius: 0.5em;*/
+  /* border-bottom-left-radius: 0.5em; */
   border-bottom-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
 }
 
-.manufacturer_entry {
-  font-size: 1.1em
+.list_entry {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: inherit;
 }
 
 .image_entry {
@@ -76,7 +81,7 @@ section.active > .sectionlist {
   /* box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); */
   padding: 1em;
   margin: 0.25em 0em;
-  border: 1px solid rgba(0,0,0,0.1);
+  /* border: 1px solid rgba(0,0,0,0.1); */
 }
 
 .image_version, .image_channel {
